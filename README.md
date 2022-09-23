@@ -17,6 +17,12 @@ The database will easily become the bottleneck. The goal is to see the performan
 
 I would also like to add different types of calls where Redis is also used. This is to see caching benefits of Redis.
 
+## Database Model
+
+It will be a simple model of a Store. A store will have bunch of products. Those products can have many items. I might slowly add more models to it. For now, I will have those.
+
+I will have Rails generate the tables and the models for simplicity. Then use SQL to query from all the different backends.
+
 ## Technologies
 
 I am going to setup each of these with their basic tutorial on bootstrapping a project, add a database client, and implement the endpoints. I will write queries in raw SQL format.
@@ -25,7 +31,7 @@ I will also build docker containers out of each of them and deploy them to one o
 
 ### Ruby on Rails
 
-Using Ruby 3 and Rails 7. I will use the `load_async` and use `fiber` isolation level. I will try it without them as well to see the performance different
+Using Ruby 3 and Rails 7. I will use the `load_async` and use [`fiber`](https://blog.saeloun.com/2022/02/23/rails-fiber-safe-connection-pools.html) isolation level. I will try it without them as well to see the performance different
 
 ### Node.js + Fastify
 
